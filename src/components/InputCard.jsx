@@ -3,8 +3,14 @@ import PropTypes from "prop-types";
 
 const FinalInputCard = ({ onSearch }) => {
   const [city, setCity] = useState("");
+  const [warning, setWarning] = useState(false);
 
   const handleSearch = () => {
+    if (!city) {
+      setWarning(true);
+      return;
+    }
+    setWarning(false);
     onSearch(city);
   };
 
@@ -23,14 +29,21 @@ const FinalInputCard = ({ onSearch }) => {
           </p>
         </div>
         <div className="flex sm:flex-row justify-center items-center flex-col gap-3">
-          <input
-            id="cityInput"
-            className="px-4 py-2 border rounded-xl md:rounded-s-2xl"
-            type="text"
-            placeholder="Enter your city"
-            value={city}
-            onChange={(e) => setCity(e.target.value)}
-          />
+          <div className="flex flex-col gap-1 justify-start items-start w-full">
+            <input
+              id="cityInput"
+              className="px-4 py-2 border rounded-xl md:rounded-s-2xl"
+              type="text"
+              placeholder="Enter your city"
+              value={city}
+              onChange={(e) => setCity(e.target.value)}
+            />
+            {warning && (
+              <p className="text-red-500 text-sm px-4">
+                City name cannot be empty**
+              </p>
+            )}
+          </div>
           <button
             id="searchBtn"
             className="bg-blue-600 text-white px-4 py-2 md:rounded-e-2xl rounded-xl w-full"
