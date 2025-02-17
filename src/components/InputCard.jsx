@@ -17,7 +17,7 @@ const FinalInputCard = ({ onSearch }) => {
   return (
     <div className="md:h-[300px] md:w-[500px] w-full bg-white p-8 flex flex-col justify-center items-center rounded-3xl gap-3">
       <p className="text-white bg-orange-600 px-4 py-1 rounded-full">
-        React JS
+        Weather Now
       </p>
       <p className="md:text-4xl text-3xl">
         <span className="font-bold ">Weather</span> APP
@@ -28,22 +28,21 @@ const FinalInputCard = ({ onSearch }) => {
             Get the weather details of any city, Right Now!
           </p>
         </div>
-        <div className="flex sm:flex-row justify-center items-center flex-col gap-3">
-          <div className="flex flex-col gap-1 justify-start items-start w-full">
-            <input
-              id="cityInput"
-              className="px-4 py-2 border rounded-xl md:rounded-s-2xl"
-              type="text"
-              placeholder="Enter your city"
-              value={city}
-              onChange={(e) => setCity(e.target.value)}
-            />
-            {warning && (
-              <p className="text-red-500 text-sm px-4">
-                City name cannot be empty**
-              </p>
-            )}
-          </div>
+        <div className="flex justify-center items-center flex-col gap-3">
+          <input
+            id="cityInput"
+            className="px-4 py-2 border rounded-xl md:rounded-s-2xl"
+            type="text"
+            placeholder="Enter your city"
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+          />
+
+          {warning && (
+            <p className="text-red-500 text-sm px-4">
+              City name cannot be empty**
+            </p>
+          )}
           <button
             id="searchBtn"
             className="bg-blue-600 text-white px-4 py-2 md:rounded-e-2xl rounded-xl w-full"
