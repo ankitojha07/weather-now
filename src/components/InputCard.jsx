@@ -17,7 +17,7 @@ const FinalInputCard = ({ onSearch }) => {
   return (
     <div className="md:h-[300px] md:w-[500px] w-full p-8 flex flex-col justify-center items-center rounded-3xl gap-3 bg-white border">
       <p className="md:text-4xl text-3xl">
-        <span className="font-bold ">Weather</span> APP
+        <span className="font-bold ">Weather APP</span>
       </p>
       <div className="flex flex-col justify-center items-center gap-4 text-center">
         <div className="flex flex-col justify-center items-center">

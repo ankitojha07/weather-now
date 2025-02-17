@@ -11,9 +11,13 @@ export const fetchWeatherData = async (city) => {
     }
 
     const data = await response.json();
+
+    if (data.error) {
+      throw new Error(data.error.message); // Return the error message from the API
+    }
     return data;
   } catch (error) {
     console.error("Error fetching the weather data:", error);
-    return null;
+    return { error: error.message };
   }
 };

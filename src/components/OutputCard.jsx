@@ -1,6 +1,14 @@
 import PropTypes from "prop-types";
 
-const FinalOutput = ({ weatherData }) => {
+const FinalOutput = ({ weatherData, error }) => {
+  if (error) {
+    return (
+      <div className="md:h-[200px] md:w-[500px] w-full p-8 flex flex-col justify-center items-center rounded-3xl bg-red-100 border border-red-400">
+        <div className="text-red-500 font-bold text-xl">{error}</div>
+      </div>
+    );
+  }
+
   if (!weatherData) {
     return null;
   }
@@ -41,6 +49,7 @@ FinalOutput.propTypes = {
       temp_c: PropTypes.number.isRequired,
     }).isRequired,
   }),
+  error: PropTypes.string, // Error message prop
 };
 
 export default FinalOutput;
