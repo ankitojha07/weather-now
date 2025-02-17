@@ -35,7 +35,7 @@ const FinalInputCard = ({ onSearch }) => {
 
           {warning && (
             <p className="text-red-500 text-sm px-4">
-              City name cannot be empty**
+              City name cannot be empty 🌆❌
             </p>
           )}
           <button
