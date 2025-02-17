@@ -19,7 +19,7 @@ const WeatherApp = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-8 p-4">
       <InputCard onSearch={handleSearch} />
       <OutputCard weatherData={weatherData} />
     </div>

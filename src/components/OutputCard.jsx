@@ -6,7 +6,7 @@ const FinalOutput = ({ weatherData }) => {
   }
 
   return (
-    <div className="md:h-[200px] md:w-[500px] w-full bg-white p-8 flex flex-col justify-center items-center rounded-3xl md:gap-8 gap-4">
+    <div className="md:h-[200px] md:w-[500px] w-full p-8 flex flex-col justify-center items-center rounded-3xl md:gap-8 gap-4 bg-white border">
       <div
         id="outputCard"
         className="flex flex-col gap-4 justify-center items-center"

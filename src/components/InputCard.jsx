@@ -15,7 +15,7 @@ const FinalInputCard = ({ onSearch }) => {
   };
 
   return (
-    <div className="md:h-[300px] md:w-[500px] w-full bg-white p-8 flex flex-col justify-center items-center rounded-3xl gap-3">
+    <div className="md:h-[300px] md:w-[500px] w-full p-8 flex flex-col justify-center items-center rounded-3xl gap-3 bg-white border">
       <p className="text-white bg-orange-600 px-4 py-1 rounded-full">
         Weather Now
       </p>
@@ -24,9 +24,7 @@ const FinalInputCard = ({ onSearch }) => {
       </p>
       <div className="flex flex-col justify-center items-center gap-4 text-center">
         <div className="flex flex-col justify-center items-center">
-          <p className="font-extralight">
-            Get the weather details of any city, Right Now!
-          </p>
+          <p className="">Get the weather details of any city, Right Now!</p>
         </div>
         <div className="flex justify-center items-center flex-col gap-3">
           <input
@@ -45,7 +43,7 @@ const FinalInputCard = ({ onSearch }) => {
           )}
           <button
             id="searchBtn"
-            className="bg-blue-600 text-white px-4 py-2 md:rounded-e-2xl rounded-xl w-full"
+            className="bg-[#1976D2] text-white px-4 py-2 md:rounded-e-2xl rounded-xl w-full"
             onClick={handleSearch}
           >
             Search
