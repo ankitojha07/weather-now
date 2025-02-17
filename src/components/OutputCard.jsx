@@ -4,7 +4,9 @@ const FinalOutput = ({ weatherData, error }) => {
   if (error) {
     return (
       <div className="md:h-[200px] md:w-[500px] w-full p-8 flex flex-col justify-center items-center rounded-3xl bg-red-100 border border-red-400">
-        <div className="text-red-500 font-bold text-xl">{error}</div>
+        <div className="text-red-500 font-bold text-xl">
+          {error + "! Please use a correct city name 🙏"}
+        </div>
       </div>
     );
   }
